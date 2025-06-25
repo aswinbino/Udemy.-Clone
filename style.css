@@ -51,11 +51,13 @@ body {
     gap: 10px;
     align-items: center;
 }
-.mylearing{
+
+.mylearing {
     position: relative;
     cursor: pointer;
 }
-.mylearing__popup{
+
+.mylearing__popup {
     position: absolute;
     background-color: whitesmoke;
     bottom: solid black 1px;
@@ -66,15 +68,19 @@ body {
     display: none;
 
 }
-.mylearing:hover .mylearing__popup{
+
+.mylearing:hover .mylearing__popup {
     display: block;
 }
+
 .categories {
+  
     display: flex;
     justify-content: space-around;
     padding: 10px;
     gap: 5px;
     border-bottom: solid black;
+   
 }
 
 .categories p {
@@ -82,7 +88,15 @@ body {
     color: grey;
     padding: 7px;
     border-radius: 30px;
+cursor: pointer;
+ border:solid aquamarine ;
 
+}
+.categories p:hover{
+    transform: 1s;
+    background-color: transparent;
+    color:black;
+    border:solid aquamarine ;
 }
 
 .sale-image img {
@@ -90,6 +104,7 @@ body {
 
 
 }
+
 .sale-image__offer {
 
     height: 120px;
@@ -99,9 +114,23 @@ body {
     position: relative;
     z-index: 2;
     position: absolute;
-
     top: 0;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
 
+@keyframes zoom {
+    0% {
+transform: scale(0);
+opacity: 0;
+    }
+100%{
+    opacity: 1;
+    transform: scale(1);
+
+}
 }
 
 .sale-image {
@@ -180,4 +209,3 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
